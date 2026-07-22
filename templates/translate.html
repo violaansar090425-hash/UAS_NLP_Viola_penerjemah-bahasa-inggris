@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block title %}Penerjemahan - SmartTranslate NLP{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="fw-bold">Penerjemahan Teks</h1>
+        <p class="text-muted">Tulis atau tempel teks Bahasa Indonesia Anda di bawah untuk diterjemahkan ke Bahasa Inggris secara instan.</p>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-lg-6">
+        <div class="card h-100">
+            <h5 class="fw-bold mb-3">Input Bahasa Indonesia</h5>
+            <form id="translateForm">
+                <div class="mb-3">
+                    <textarea class="form-control" id="inputText" rows="6" placeholder="Masukkan kalimat Bahasa Indonesia di sini..."></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="modelSelect" class="form-label text-muted small">Pilih Model Terjemahan</label>
+                    <select class="form-select" id="modelSelect">
+                        <option value="MarianMT" selected>MarianMT (Helsinki-NLP/opus-mt-id-en)</option>
+                    </select>
+                </div>
+                
+                <div class="progress-bar-custom mb-4">
+                    <div class="progress-bar-fill" id="progressBarFill"></div>
+                </div>
+
+                <div class="d-flex gap-2 flex-wrap">
+                    <button type="submit" class="btn btn-primary" id="btnTranslate">
+                        <i class="bi bi-translate me-2"></i>Terjemahkan
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="btnUseExample">Gunakan Contoh</button>
+                    <button type="button" class="btn btn-secondary" id="btnReset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="card h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold m-0">Hasil Terjemahan Bahasa Inggris</h5>
+                <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-sm btn-secondary" id="btnCopy" title="Salin Teks">
+                        <i class="bi bi-clipboard"></i> Salin
+                    </button>
+                    <button type="button" class="btn btn-sm btn-secondary" id="btnDownload" title="Unduh TXT">
+                        <i class="bi bi-download"></i> Unduh
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <textarea class="form-control" id="translatedText" rows="6" readonly placeholder="Hasil terjemahan akan muncul di sini..."></textarea>
+            </div>
+            
+            <div class="row g-2 text-center mt-3">
+                <div class="col-4">
+                    <div class="p-2 border rounded">
+                        <div class="fw-bold text-success" id="charCountOut">0</div>
+                        <div class="text-muted small">Karakter</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="p-2 border rounded">
+                        <div class="fw-bold text-success" id="wordCountOut">0</div>
+                        <div class="text-muted small">Kata</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="p-2 border rounded">
+                        <div class="fw-bold text-success" id="readingTimeOut">0</div>
+                        <div class="text-muted small">Waktu Baca (Detik)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="alert alert-success d-none mb-4" id="translationAlert" role="alert">
+    Penerjemahan berhasil diselesaikan!
+</div>
+
+<div class="row mb-5">
+    <div class="col-12">
+        <div class="card">
+            <h5 class="fw-bold mb-3">Langkah Preprocessing</h5>
+            <div class="accordion" id="preprocessAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            1. Teks Asli & Lowercase
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#preprocessAccordion">
+                        <div class="accordion-body">
+                            <div class="mb-2"><strong>Asli:</strong> <span id="stepOriginal">-</span></div>
+                            <div><strong>Huruf Kecil:</strong> <span id="stepLowercase">-</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            2. Pembersihan Karakter (Cleaning)
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#preprocessAccordion">
+                        <div class="accordion-body">
+                            <div><strong>Hasil Pembersihan:</strong> <span id="stepCleaned">-</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            3. Normalisasi Whitespace
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#preprocessAccordion">
+                        <div class="accordion-body">
+                            <div><strong>Hasil Normalisasi Whitespace:</strong> <span id="stepWhitespace">-</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            4. Tokenisasi & Normalisasi Spasi
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#preprocessAccordion">
+                        <div class="accordion-body">
+                            <div class="mb-2"><strong>Token Kata:</strong> <span id="stepTokenized">-</span></div>
+                            <div><strong>Hasil Final:</strong> <span id="stepFinal">-</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="fw-bold m-0">Riwayat Terjemahan (Evaluasi Terintegrasi)</h5>
+                <div class="d-flex gap-2">
+                    <a href="{{ url_for('export_history_csv') }}" class="btn btn-sm btn-secondary">
+                        <i class="bi bi-file-earmark-spreadsheet"></i> Ekspor CSV
+                    </a>
+                    <button type="button" class="btn btn-sm btn-danger" id="btnClearHistory">
+                        <i class="bi bi-trash"></i> Hapus Semua
+                    </button>
+                </div>
+            </div>
+            
+            <div class="table-responsive table-custom">
+                <table class="table table-hover m-0">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">No</th>
+                            <th>Bahasa Indonesia</th>
+                            <th>Bahasa Inggris (Prediksi)</th>
+                            <th style="width: 80px;">BLEU</th>
+                            <th style="width: 80px;">ROUGE</th>
+                            <th style="width: 80px;">METEOR</th>
+                            <th style="width: 80px;">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

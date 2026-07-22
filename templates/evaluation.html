@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+
+{% block title %}Evaluasi Model - SmartTranslate NLP{% endblock %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col-12">
+        <h1 class="fw-bold">Evaluasi Kinerja Model</h1>
+        <p class="text-muted">Hasil evaluasi otomatis model Helsinki-NLP/opus-mt-id-en menggunakan metrik standar industri pemrosesan bahasa alami.</p>
+    </div>
+</div>
+
+<div class="row g-4 mb-4">
+    <div class="col-md-2-5 col-sm-6 flex-grow-1">
+        <div class="card stat-card">
+            <div class="stat-val">{{ "%.2f"|format(eval_results.avg_bleu) }}</div>
+            <div class="stat-lbl mt-2">Rata-rata BLEU</div>
+        </div>
+    </div>
+    <div class="col-md-2-5 col-sm-6 flex-grow-1">
+        <div class="card stat-card">
+            <div class="stat-val">{{ "%.2f"|format(eval_results.avg_rouge1) }}</div>
+            <div class="stat-lbl mt-2">ROUGE-1</div>
+        </div>
+    </div>
+    <div class="col-md-2-5 col-sm-6 flex-grow-1">
+        <div class="card stat-card">
+            <div class="stat-val">{{ "%.2f"|format(eval_results.avg_rouge2) }}</div>
+            <div class="stat-lbl mt-2">ROUGE-2</div>
+        </div>
+    </div>
+    <div class="col-md-2-5 col-sm-6 flex-grow-1">
+        <div class="card stat-card">
+            <div class="stat-val">{{ "%.2f"|format(eval_results.avg_rougeL) }}</div>
+            <div class="stat-lbl mt-2">ROUGE-L</div>
+        </div>
+    </div>
+    <div class="col-md-2-5 col-sm-6 flex-grow-1">
+        <div class="card stat-card">
+            <div class="stat-val">{{ "%.2f"|format(eval_results.avg_meteor) }}</div>
+            <div class="stat-lbl mt-2">METEOR</div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-lg-6">
+        <div class="card">
+            <h5 class="fw-bold mb-3">Distribusi Nilai Metrik</h5>
+            <canvas id="evaluationBarChart" 
+                    data-bleu="{{ eval_results.avg_bleu }}" 
+                    data-rouge1="{{ eval_results.avg_rouge1 }}"
+                    data-rouge2="{{ eval_results.avg_rouge2 }}"
+                    data-rougeL="{{ eval_results.avg_rougeL }}"
+                    data-meteor="{{ eval_results.avg_meteor }}"
+                    style="height: 300px;"></canvas>
+        </div>
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="card">
+            <h5 class="fw-bold mb-3">Tren Skor Evaluasi Historis</h5>
+            <canvas id="evaluationLineChart" style="height: 300px;"></canvas>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-lg-4 text-center">
+        <div class="card h-100 d-flex flex-column align-items-center justify-content-center">
+            <h5 class="fw-bold mb-3">Tingkat Kemiripan (BLEU)</h5>
+            <div class="gauge-container mb-3" style="width: 200px; height: 100px; position: relative;">
+                <canvas id="evaluationGaugeChart"></canvas>
+                <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); font-size: 24px; font-weight: 700; color: #5BAE7A;">
+                    {{ "%.1f"|format(eval_results.avg_bleu) }}%
+                </div>
+            </div>
+            <p class="text-muted small px-3">Persentase kecocokan n-gram teks prediksi model dengan teks referensi manusia.</p>
+        </div>
+    </div>
+
+    <div class="col-lg-8">
+        <div class="card h-100">
+            <h5 class="fw-bold mb-3">Interpretasi Hasil Evaluasi</h5>
+            <div class="d-flex flex-column gap-3">
+                <div class="p-3 rounded" style="background-color: #F7FBF8; border-left: 4px solid #5BAE7A;">
+                    <h6 class="fw-bold m-0 text-success">Skor BLEU (Bilingual Evaluation Understudy)</h6>
+                    <p class="text-muted small m-0 mt-1">Skor BLEU rata-rata sebesar {{ "%.2f"|format(eval_results.avg_bleu) }}% menunjukkan tingkat akurasi penerjemahan yang sangat baik. Nilai di atas 40% secara umum diklasifikasikan sebagai terjemahan berkualitas tinggi yang mendekati hasil manusia.</p>
+                </div>
+                <div class="p-3 rounded" style="background-color: #F7FBF8; border-left: 4px solid #87C9A5;">
+                    <h6 class="fw-bold m-0 text-success">Skor ROUGE-L (Recall-Oriented Understudy for Gisting Evaluation)</h6>
+                    <p class="text-muted small m-0 mt-1">Skor ROUGE-L sebesar {{ "%.2f"|format(eval_results.avg_rougeL) }}% menunjukkan tingkat tumpang tindih urutan kata terpanjang (LCS) yang tinggi, menandakan kesamaan struktur kalimat dan alur tata bahasa antara kalimat target dan hasil terjemahan.</p>
+                </div>
+                <div class="p-3 rounded" style="background-color: #F7FBF8; border-left: 4px solid #3D9C67;">
+                    <h6 class="fw-bold m-0 text-success">Skor METEOR (Metric for Evaluation of Translation with Explicit ORdering)</h6>
+                    <p class="text-muted small m-0 mt-1">Skor METEOR sebesar {{ "%.2f"|format(eval_results.avg_meteor) }}% mengonfirmasi akurasi semantik (makna kata) karena turut memperhitungkan sinonim (synonymy) dan kecocokan stem kata dasar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <h5 class="fw-bold mb-3">Tabel Hasil Evaluasi Sampel</h5>
+            <div class="table-responsive table-custom">
+                <table class="table table-hover m-0">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">No</th>
+                            <th>Bahasa Indonesia</th>
+                            <th>Referensi Asli</th>
+                            <th>Prediksi Model</th>
+                            <th style="width: 80px;">BLEU</th>
+                            <th style="width: 80px;">ROUGE-L</th>
+                            <th style="width: 80px;">METEOR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in eval_results.details %}
+                        <tr>
+                            <td>{{ row.id }}</td>
+                            <td>{{ row.indonesia }}</td>
+                            <td>{{ row.reference }}</td>
+                            <td>{{ row.hypothesis }}</td>
+                            <td><span class="badge bg-success">{{ "%.1f"|format(row.bleu) }}</span></td>
+                            <td><span class="badge bg-success">{{ "%.1f"|format(row.rougeL) }}</span></td>
+                            <td><span class="badge bg-success">{{ "%.1f"|format(row.meteor) }}</span></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

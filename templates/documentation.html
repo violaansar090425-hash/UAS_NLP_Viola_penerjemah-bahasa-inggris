@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+
+{% block title %}Dokumentasi - SmartTranslate NLP{% endblock %}
+
+{% block content %}
+<div class="row mb-5">
+    <div class="col-12">
+        <h1 class="fw-bold">Dokumentasi Proyek</h1>
+        <p class="text-muted">Panduan lengkap mengenai aplikasi, alur kerja sistem, pemrosesan bahasa alami, serta cara instalasi dan penggunaan.</p>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-lg-3">
+        <div class="card sticky-top" style="top: 100px; z-index: 100;">
+            <h6 class="fw-bold mb-3 text-uppercase small text-muted">Daftar Isi</h6>
+            <div class="nav flex-column nav-pills">
+                <a class="nav-link py-2 ps-0 border-bottom text-start" href="#tentang">Tentang Aplikasi</a>
+                <a class="nav-link py-2 ps-0 border-bottom text-start" href="#teknologi">Teknologi</a>
+                <a class="nav-link py-2 ps-0 border-bottom text-start" href="#alur">Alur Sistem</a>
+                <a class="nav-link py-2 ps-0 border-bottom text-start" href="#model">Model NLP</a>
+                <a class="nav-link py-2 ps-0 border-bottom text-start" href="#instalasi">Instalasi</a>
+                <a class="nav-link py-2 ps-0 border-bottom text-start" href="#penggunaan">Contoh Penggunaan</a>
+                <a class="nav-link py-2 ps-0 border-bottom text-start" href="#kelebihan">Kelebihan & Kekurangan</a>
+                <a class="nav-link py-2 ps-0 text-start" href="#lisensi">Lisensi</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-9">
+        <div class="card mb-4" id="tentang">
+            <h3 class="fw-bold text-success mb-3">Tentang Aplikasi</h3>
+            <p>SmartTranslate NLP adalah sistem penerjemahan kalimat Bahasa Indonesia ke Bahasa Inggris berbasis kecerdasan buatan dan pemrosesan bahasa alami (NLP) modern. Proyek ini dibangun sebagai bagian dari Ujian Akhir Semester (UAS) Natural Language Processing.</p>
+            <p>Tujuan utama aplikasi ini adalah menyediakan antarmuka penerjemahan yang cepat, andal, dan transparan, di mana pengguna dapat melihat proses di balik layar (preprocessing dan tokenisasi) serta mengukur kualitas hasil terjemahan secara objektif dengan metrik formal.</p>
+        </div>
+
+        <div class="card mb-4" id="teknologi">
+            <h3 class="fw-bold text-success mb-3">Teknologi</h3>
+            <p>Sistem ini dibangun dengan mengintegrasikan beberapa framework dan pustaka berikut:</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="table-light">
+                        <th>Komponen</th>
+                        <th>Teknologi yang Digunakan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Backend Framework</td>
+                        <td>Flask 3 (Python 3.12+)</td>
+                    </tr>
+                    <tr>
+                        <td>Frontend</td>
+                        <td>HTML5, CSS3, JavaScript (ES6+), Bootstrap 5</td>
+                    </tr>
+                    <tr>
+                        <td>Deep Learning Framework</td>
+                        <td>PyTorch, HuggingFace Transformers</td>
+                    </tr>
+                    <tr>
+                        <td>Pre-trained Model</td>
+                        <td>MarianMT (Helsinki-NLP/opus-mt-id-en)</td>
+                    </tr>
+                    <tr>
+                        <td>Analisis Data</td>
+                        <td>Pandas, NumPy</td>
+                    </tr>
+                    <tr>
+                        <td>NLP Helpers</td>
+                        <td>NLTK (Natural Language Toolkit)</td>
+                    </tr>
+                    <tr>
+                        <td>Evaluasi Kinerja</td>
+                        <td>SacreBLEU, ROUGE Score, NLTK Meteor</td>
+                    </tr>
+                    <tr>
+                        <td>Database Penyimpanan</td>
+                        <td>SQLite (smarttranslate.db)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card mb-4" id="alur">
+            <h3 class="fw-bold text-success mb-3">Alur Sistem</h3>
+            <p>Proses penerjemahan dari input pengguna hingga hasil akhir melewati tahapan berikut:</p>
+            <div class="d-flex flex-column gap-3 my-3">
+                <div class="p-3 border rounded-3 bg-light">
+                    <div class="fw-bold text-success">1. Input Kalimat</div>
+                    <div class="text-muted small">Pengguna memasukkan kalimat dalam Bahasa Indonesia melalui antarmuka web.</div>
+                </div>
+                <div class="p-3 border rounded-3 bg-light">
+                    <div class="fw-bold text-success">2. Preprocessing & Normalisasi</div>
+                    <div class="text-muted small">Teks diubah menjadi huruf kecil, karakter non-alphanumeric dibersihkan, dan whitespace dinormalisasi.</div>
+                </div>
+                <div class="p-3 border rounded-3 bg-light">
+                    <div class="fw-bold text-success">3. Tokenisasi</div>
+                    <div class="text-muted small">Teks dibagi menjadi satuan token kata dasar menggunakan NLTK sebelum dikirim ke model neural net.</div>
+                </div>
+                <div class="p-3 border rounded-3 bg-light">
+                    <div class="fw-bold text-success">4. Transformer MarianMT (Decoder-Encoder)</div>
+                    <div class="text-muted small">Token diproses oleh model Helsinki-NLP/opus-mt-id-en untuk menghasilkan representasi semantik bahasa Inggris.</div>
+                </div>
+                <div class="p-3 border rounded-3 bg-light">
+                    <div class="fw-bold text-success">5. Evaluasi Kinerja</div>
+                    <div class="text-muted small">Kalimat terjemahan dibandingkan dengan dataset referensi untuk menghitung BLEU, ROUGE, dan METEOR.</div>
+                </div>
+                <div class="p-3 border rounded-3 bg-light">
+                    <div class="fw-bold text-success">6. Output & Riwayat</div>
+                    <div class="text-muted small">Hasil terjemahan ditampilkan di layar dan disimpan secara otomatis ke database SQLite.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4" id="model">
+            <h3 class="fw-bold text-success mb-3">Model NLP</h3>
+            <p>Aplikasi menggunakan model <strong>MarianMT</strong> yang disediakan oleh Universitas Helsinki (Helsinki-NLP) di platform Hugging Face dengan nama direktori <code>Helsinki-NLP/opus-mt-id-en</code>.</p>
+            <p>Model ini dilatih menggunakan korpus paralel besar OPUS. Menggunakan arsitektur Transformer standar (Encoder-Decoder) yang sangat efisien untuk tugas penerjemahan mesin dua arah.</p>
+        </div>
+
+        <div class="card mb-4" id="instalasi">
+            <h3 class="fw-bold text-success mb-3">Instalasi & Cara Menjalankan</h3>
+            <p>Ikuti langkah-langkah berikut untuk menjalankan aplikasi di lingkungan lokal Anda:</p>
+            
+            <h6 class="fw-bold text-dark mt-3">1. Kebutuhan Sistem</h6>
+            <ul>
+                <li>Python 3.12 atau versi di atasnya</li>
+                <li>Pip (Python Package Installer)</li>
+                <li>Koneksi internet aktif untuk mengunduh model pada saat pertama kali aplikasi dijalankan</li>
+            </ul>
+
+            <h6 class="fw-bold text-dark mt-3">2. Instalasi Dependensi</h6>
+            <pre class="bg-light p-3 rounded-3 text-dark"><code>pip install -r requirements.txt</code></pre>
+
+            <h6 class="fw-bold text-dark mt-3">3. Menjalankan Aplikasi</h6>
+            <pre class="bg-light p-3 rounded-3 text-dark"><code>flask run</code></pre>
+            <p>Setelah dijalankan, buka peramban web dan akses halaman di alamat <code>http://127.0.0.1:5000</code>.</p>
+        </div>
+
+        <div class="card mb-4" id="penggunaan">
+            <h3 class="fw-bold text-success mb-3">Contoh Penggunaan</h3>
+            <div class="p-3 border rounded bg-light mb-3">
+                <div class="fw-bold text-dark small mb-1">Contoh Input Bahasa Indonesia:</div>
+                <div class="text-muted font-monospace">Kecerdasan buatan berkembang sangat cepat.</div>
+            </div>
+            <div class="p-3 border rounded bg-light">
+                <div class="fw-bold text-dark small mb-1">Contoh Output Bahasa Inggris:</div>
+                <div class="text-muted font-monospace">Artificial intelligence is developing very fast.</div>
+            </div>
+        </div>
+
+        <div class="card mb-4" id="kelebihan">
+            <h3 class="fw-bold text-success mb-3">Kelebihan & Kekurangan</h3>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="p-3 border rounded bg-light h-100">
+                        <h6 class="fw-bold text-success">Kelebihan</h6>
+                        <ul class="small ps-3 mb-0">
+                            <li>Akurasi penerjemahan tinggi berkat arsitektur deep learning Transformer.</li>
+                            <li>Kecepatan eksekusi cepat menggunakan cache lokal model.</li>
+                            <li>Tersedia visualisasi hasil evaluasi langsung.</li>
+                            <li>Dukungan preprocessing yang lengkap dan transparan.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-3 border rounded bg-light h-100">
+                        <h6 class="fw-bold text-danger">Kekurangan</h6>
+                        <ul class="small ps-3 mb-0">
+                            <li>Memerlukan memori RAM yang cukup besar saat memuat model pertama kali.</li>
+                            <li>Model sangat terikat pada domain data latih OPUS.</li>
+                            <li>Ketergantungan pada pustaka eksternal yang cukup banyak.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4" id="lisensi">
+            <h3 class="fw-bold text-success mb-3">Lisensi</h3>
+            <p>Proyek SmartTranslate NLP dilisensikan di bawah Lisensi MIT. Anda dibebaskan untuk memodifikasi dan membagikan kembali proyek ini untuk keperluan akademis maupun non-komersial.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

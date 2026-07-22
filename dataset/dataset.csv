@@ -1,0 +1,203 @@
+id,indonesia,english,created_at
+1,"Halo, apa kabar?","Hello, how are you?",2026-07-21 00:00:00
+2,Selamat pagi semuanya.,Good morning everyone.,2026-07-21 00:00:00
+3,Siapa nama Anda?,What is your name?,2026-07-21 00:00:00
+4,Saya tinggal di Jakarta.,I live in Jakarta.,2026-07-21 00:00:00
+5,Apakah Anda bisa membantu saya?,Can you help me?,2026-07-21 00:00:00
+6,Terima kasih banyak atas bantuan Anda.,Thank you very much for your help.,2026-07-21 00:00:00
+7,"Sama-sama, dengan senang hati.","You are welcome, with pleasure.",2026-07-21 00:00:00
+8,Di mana stasiun kereta api terdekat?,Where is the nearest train station?,2026-07-21 00:00:00
+9,Berapa harga tiket ini?,How much is this ticket?,2026-07-21 00:00:00
+10,Saya ingin memesan secangkir kopi hangat.,I want to order a cup of warm coffee.,2026-07-21 00:00:00
+11,Hari ini cuacanya sangat bagus.,Today the weather is very nice.,2026-07-21 00:00:00
+12,Kemarin saya pergi ke perpustakaan.,Yesterday I went to the library.,2026-07-21 00:00:00
+13,Besok kita akan mengadakan rapat besar.,Tomorrow we will hold a big meeting.,2026-07-21 00:00:00
+14,Buku ini sangat menarik untuk dibaca.,This book is very interesting to read.,2026-07-21 00:00:00
+15,Di mana letak toilet umum?,Where is the public toilet located?,2026-07-21 00:00:00
+16,Saya suka makan nasi goreng pedas.,I like to eat spicy fried rice.,2026-07-21 00:00:00
+17,Kami sedang belajar bahasa Inggris.,We are learning English.,2026-07-21 00:00:00
+18,Apakah Anda memiliki rekomendasi hotel?,Do you have a hotel recommendation?,2026-07-21 00:00:00
+19,Jam berapa sekarang di sana?,What time is it now there?,2026-07-21 00:00:00
+20,Saya merasa kurang enak badan hari ini.,I feel a bit unwell today.,2026-07-21 00:00:00
+21,Obat ini harus diminum tiga kali sehari.,This medicine must be taken three times a day.,2026-07-21 00:00:00
+22,Hati-hati di jalan saat pulang.,Be careful on the road when going home.,2026-07-21 00:00:00
+23,"Selamat ulang tahun, semoga panjang umur.","Happy birthday, I wish you a long life.",2026-07-21 00:00:00
+24,Semoga sukses dengan ujian Anda.,Good luck with your exam.,2026-07-21 00:00:00
+25,Di mana saya bisa menukar uang?,Where can I exchange money?,2026-07-21 00:00:00
+26,Kamar ini sangat bersih dan nyaman.,This room is very clean and comfortable.,2026-07-21 00:00:00
+27,Saya ingin membeli oleh-oleh khas daerah.,I want to buy local souvenirs.,2026-07-21 00:00:00
+28,Pemandangan alam di sini sangat indah.,The natural scenery here is very beautiful.,2026-07-21 00:00:00
+29,Bandara berada cukup jauh dari pusat kota.,The airport is quite far from the city center.,2026-07-21 00:00:00
+30,"Saya tersesat, bolehkah saya bertanya?","I am lost, may I ask a question?",2026-07-21 00:00:00
+31,Tolong pelankan suara Anda sedikit.,Please lower your voice a bit.,2026-07-21 00:00:00
+32,Saya tidak mengerti apa maksud Anda.,I do not understand what you mean.,2026-07-21 00:00:00
+33,Tolong tulis alamat ini di kertas.,Please write this address on paper.,2026-07-21 00:00:00
+34,Apakah Anda menerima pembayaran kartu kredit?,Do you accept credit card payments?,2026-07-21 00:00:00
+35,Saya sangat senang bertemu dengan Anda.,I am very happy to meet you.,2026-07-21 00:00:00
+36,Mari kita pergi makan malam bersama.,Let us go have dinner together.,2026-07-21 00:00:00
+37,Telepon seluler saya kehabisan baterai.,My mobile phone has run out of battery.,2026-07-21 00:00:00
+38,Saya ingin menyewa sepeda untuk keliling.,I want to rent a bicycle to go around.,2026-07-21 00:00:00
+39,Harga barang-barang di pasar sangat murah.,The price of goods in the market is very cheap.,2026-07-21 00:00:00
+40,Saya harus pergi sekarang juga.,I have to go right now.,2026-07-21 00:00:00
+41,Pemrosesan bahasa alami adalah bidang yang menarik.,Natural language processing is an exciting field.,2026-07-21 00:00:00
+42,Model transformer mengubah dunia teknologi informasi.,Transformer models are changing the world of information technology.,2026-07-21 00:00:00
+43,Mari kita lakukan analisis data hari ini.,Let us do data analysis today.,2026-07-21 00:00:00
+44,Bahasa adalah alat komunikasi paling penting.,Language is the most important communication tool.,2026-07-21 00:00:00
+45,Kecerdasan buatan berkembang sangat cepat.,Artificial intelligence is developing very fast.,2026-07-21 00:00:00
+46,Jaringan saraf tiruan meniru otak manusia.,Artificial neural networks mimic the human brain.,2026-07-21 00:00:00
+47,Pembelajaran mendalam membutuhkan banyak data.,Deep learning requires a lot of data.,2026-07-21 00:00:00
+48,Pembelajaran mesin membantu memprediksi tren.,Machine learning helps predict trends.,2026-07-21 00:00:00
+49,Algoritma ini sangat efisien dalam komputasi.,This algorithm is very efficient in computation.,2026-07-21 00:00:00
+50,Kami menggunakan pustaka pandas untuk manipulasi data.,We use the pandas library for data manipulation.,2026-07-21 00:00:00
+51,Numpy menyediakan operasi matriks yang cepat.,Numpy provides fast matrix operations.,2026-07-21 00:00:00
+52,Sacrebleu digunakan untuk mengevaluasi metrik terjemahan.,Sacrebleu is used to evaluate translation metrics.,2026-07-21 00:00:00
+53,Metrik rouge mengukur tumpang tindih n-gram.,The rouge metric measures n-gram overlap.,2026-07-21 00:00:00
+54,Meteor mengevaluasi keselarasan kata secara dinamis.,Meteor evaluates word alignment dynamically.,2026-07-21 00:00:00
+55,Data latih harus dibersihkan terlebih dahulu.,The training data must be cleaned first.,2026-07-21 00:00:00
+56,Tokenisasi memecah teks menjadi unit kecil.,Tokenization breaks text into small units.,2026-07-21 00:00:00
+57,Penerjemahan mesin membantu menghubungkan banyak orang.,Machine translation helps connect many people.,2026-07-21 00:00:00
+58,Korpus paralel berisi teks dua bahasa.,A parallel corpus contains texts of two languages.,2026-07-21 00:00:00
+59,Evaluasi otomatis menghemat waktu dan biaya.,Automatic evaluation saves time and cost.,2026-07-21 00:00:00
+60,Kami memproses kumpulan data sebelum melatih model.,We process the dataset before training the model.,2026-07-21 00:00:00
+61,Setiap kalimat harus memiliki pasangan terjemahan.,Each sentence must have a translation pair.,2026-07-21 00:00:00
+62,Akurasi terjemahan sangat tergantung kualitas data.,Translation accuracy highly depends on data quality.,2026-07-21 00:00:00
+63,Representasi vektor menyimpan makna kata.,Vector representation stores word meaning.,2026-07-21 00:00:00
+64,Perhatian mandiri adalah kunci arsitektur transformer.,Self-attention is the key of the transformer architecture.,2026-07-21 00:00:00
+65,Gunakan pustaka huggingface untuk memuat model.,Use the huggingface library to load the model.,2026-07-21 00:00:00
+66,Token khusus digunakan untuk menandai awal kalimat.,Special tokens are used to mark the start of a sentence.,2026-07-21 00:00:00
+67,Model marianmt sangat cocok untuk penerjemahan.,The marianmt model is very suitable for translation.,2026-07-21 00:00:00
+68,Kami membagi data menjadi latih dan uji.,We split the data into train and test.,2026-07-21 00:00:00
+69,Fungsi kerugian dioptimalkan menggunakan adam.,The loss function is optimized using adam.,2026-07-21 00:00:00
+70,Kecepatan inferensi dapat ditingkatkan dengan gpu.,Inference speed can be increased with a GPU.,2026-07-21 00:00:00
+71,Model pra-terlatih sangat menghemat sumber daya.,Pre-trained models highly save resources.,2026-07-21 00:00:00
+72,Penerjemahan berbasis aturan memiliki banyak batasan.,Rule-based translation has many limitations.,2026-07-21 00:00:00
+73,Analisis sentimen mendeteksi emosi dalam teks.,Sentiment analysis detects emotions in text.,2026-07-21 00:00:00
+74,Ekstraksi entitas mengenali nama orang dan lokasi.,Entity extraction recognizes names of people and locations.,2026-07-21 00:00:00
+75,Ringkasan teks otomatis menghasilkan poin penting.,Automatic text summarization generates key points.,2026-07-21 00:00:00
+76,Klasifikasi teks membagi dokumen ke dalam kategori.,Text classification divides documents into categories.,2026-07-21 00:00:00
+77,Model bahasa generatif dapat menulis cerita.,Generative language models can write stories.,2026-07-21 00:00:00
+78,Penyetelan halus menyesuaikan model ke tugas spesifik.,Fine-tuning adapts the model to a specific task.,2026-07-21 00:00:00
+79,Bias dalam data harus diidentifikasi dan dikurangi.,Bias in data must be identified and mitigated.,2026-07-21 00:00:00
+80,Etika kecerdasan buatan adalah topik penting.,Ethics of artificial intelligence is an important topic.,2026-07-21 00:00:00
+81,Rapat hari ini dimulai pukul sembilan pagi.,Today's meeting starts at nine in the morning.,2026-07-21 00:00:00
+82,Laporan keuangan harus diserahkan akhir bulan.,The financial report must be submitted at the end of the month.,2026-07-21 00:00:00
+83,Saya bekerja sebagai pengembang perangkat lunak.,I work as a software developer.,2026-07-21 00:00:00
+84,Kantor kami menerapkan sistem kerja fleksibel.,Our office implements a flexible working system.,2026-07-21 00:00:00
+85,Kami membutuhkan proposal proyek minggu depan.,We need the project proposal next week.,2026-07-21 00:00:00
+86,Evaluasi kinerja dilakukan setiap enam bulan.,Performance evaluation is conducted every six months.,2026-07-21 00:00:00
+87,Kerja sama tim sangat penting untuk sukses.,Teamwork is very important for success.,2026-07-21 00:00:00
+88,Tolong kirimkan berkas ini melalui surat elektronik.,Please send this file via email.,2026-07-21 00:00:00
+89,Saya sedang menghadiri konferensi teknologi.,I am attending a technology conference.,2026-07-21 00:00:00
+90,Silakan tanda tangani dokumen kontrak kerja.,Please sign the employment contract document.,2026-07-21 00:00:00
+91,Batas waktu pengumpulan tugas adalah besok sore.,The deadline for task submission is tomorrow afternoon.,2026-07-21 00:00:00
+92,Kami harus memotong anggaran biaya operasional.,We have to cut operational budget costs.,2026-07-21 00:00:00
+93,Peluncuran produk baru ditunda bulan depan.,The launch of the new product is postponed to next month.,2026-07-21 00:00:00
+94,Manajer pemasaran sedang mempresentasikan strategi.,The marketing manager is presenting the strategy.,2026-07-21 00:00:00
+95,Silakan hubungi bagian layanan pelanggan.,Please contact customer service.,2026-07-21 00:00:00
+96,Kami berkomitmen memberikan kualitas terbaik.,We are committed to providing the best quality.,2026-07-21 00:00:00
+97,Keamanan data adalah prioritas utama perusahaan.,Data security is the company's top priority.,2026-07-21 00:00:00
+98,Sesi pelatihan karyawan diadakan hari kamis.,The employee training session is held on Thursday.,2026-07-21 00:00:00
+99,Surat penawaran harga telah dikirim ke klien.,The price quotation letter has been sent to the client.,2026-07-21 00:00:00
+100,Proyek ini membutuhkan analisis kebutuhan detail.,This project requires a detailed requirements analysis.,2026-07-21 00:00:00
+101,Kami merencanakan perjalanan liburan ke Bali.,We are planning a holiday trip to Bali.,2026-07-21 00:00:00
+102,Tiket pesawat sudah dipesan jauh hari.,The plane tickets have been booked long in advance.,2026-07-21 00:00:00
+103,Candi Borobudur adalah tujuan wisata populer.,Borobudur Temple is a popular tourist destination.,2026-07-21 00:00:00
+104,Saya ingin mengunjungi museum sejarah besok.,I want to visit the history museum tomorrow.,2026-07-21 00:00:00
+105,Pantai di Lombok sangat bersih dan indah.,The beach in Lombok is very clean and beautiful.,2026-07-21 00:00:00
+106,Di mana tempat menyewa mobil yang murah?,Where is a cheap car rental place?,2026-07-21 00:00:00
+107,Wisatawan asing harus membawa paspor mereka.,Foreign tourists must carry their passports.,2026-07-21 00:00:00
+108,Makanan tradisional Indonesia sangat kaya rempah.,Traditional Indonesian food is very rich in spices.,2026-07-21 00:00:00
+109,Saya ingin memesan tur berpemandu untuk kota ini.,I want to book a guided tour for this city.,2026-07-21 00:00:00
+110,Berapa lama perjalanan dari sini ke bandara?,How long is the trip from here to the airport?,2026-07-21 00:00:00
+111,Peta digital sangat membantu saat bepergian.,Digital maps are very helpful when traveling.,2026-07-21 00:00:00
+112,Kami menginap di penginapan dekat pantai.,We stayed at a guesthouse near the beach.,2026-07-21 00:00:00
+113,Cuaca tropis sangat hangat sepanjang tahun.,The tropical weather is very warm all year round.,2026-07-21 00:00:00
+114,Jangan lupa membawa tabir surya saat liburan.,Do not forget to bring sunscreen during holidays.,2026-07-21 00:00:00
+115,Saya ingin mencoba kuliner lokal di pasar malam.,I want to try local cuisine at the night market.,2026-07-21 00:00:00
+116,Penerbangan kami ditunda selama dua jam.,Our flight was delayed for two hours.,2026-07-21 00:00:00
+117,Stasiun pengisian daya baterai ada di sana.,The battery charging station is over there.,2026-07-21 00:00:00
+118,Kami membeli tiket masuk secara daring.,We bought the admission tickets online.,2026-07-21 00:00:00
+119,Taksi online sangat mudah ditemukan di sini.,Online taxis are very easy to find here.,2026-07-21 00:00:00
+120,Simpan barang bawaan Anda di tempat yang aman.,Keep your luggage in a safe place.,2026-07-21 00:00:00
+121,Metode penelitian harus dijelaskan secara rinci.,The research method must be explained in detail.,2026-07-21 00:00:00
+122,Tinjauan pustaka mendukung landasan teori.,The literature review supports the theoretical foundation.,2026-07-21 00:00:00
+123,Hipotesis diuji menggunakan analisis statistik.,The hypothesis is tested using statistical analysis.,2026-07-21 00:00:00
+124,Hasil penelitian ini dipublikasikan di jurnal internasional.,The results of this study are published in an international journal.,2026-07-21 00:00:00
+125,Daftar pustaka diletakkan di bagian akhir.,The bibliography is placed at the end.,2026-07-21 00:00:00
+126,Pengumpulan data dilakukan melalui kuesioner.,Data collection is conducted through questionnaires.,2026-07-21 00:00:00
+127,Sampel penelitian harus representatif.,The research sample must be representative.,2026-07-21 00:00:00
+128,Tesis ini membahas tentang pembelajaran mesin.,This thesis discusses machine learning.,2026-07-21 00:00:00
+129,Abstrak merangkum seluruh isi laporan.,The abstract summarizes the entire content of the report.,2026-07-21 00:00:00
+130,Penelitian lanjutan diperlukan untuk validasi.,Further research is required for validation.,2026-07-21 00:00:00
+131,Analisis kuantitatif menghasilkan data angka.,Quantitative analysis produces numerical data.,2026-07-21 00:00:00
+132,Studi kasus dilakukan pada tiga sekolah.,The case study was conducted at three schools.,2026-07-21 00:00:00
+133,Kesimpulan menjawab tujuan penelitian.,The conclusion answers the research objectives.,2026-07-21 00:00:00
+134,Saran diberikan untuk perbaikan sistem.,Suggestions are provided for system improvement.,2026-07-21 00:00:00
+135,Variabel bebas memengaruhi variabel terikat.,The independent variable influences the dependent variable.,2026-07-21 00:00:00
+136,Etika penelitian harus dijunjung tinggi oleh peneliti.,Research ethics must be upheld by researchers.,2026-07-21 00:00:00
+137,Kutipan langsung harus mencantumkan sumber.,Direct citations must state the source.,2026-07-21 00:00:00
+138,Plagiarisme adalah pelanggaran akademik berat.,Plagiarism is a serious academic offense.,2026-07-21 00:00:00
+139,Sidang tugas akhir diadakan bulan depan.,The final project defense is held next month.,2026-07-21 00:00:00
+140,Dosen pembimbing memberikan banyak masukan.,The advisor provides a lot of input.,2026-07-21 00:00:00
+141,Kopi arabika memiliki aroma yang sangat harum.,Arabica coffee has a very fragrant aroma.,2026-07-21 00:00:00
+142,Anak-anak bermain layang-layang di lapangan.,Children play kites in the field.,2026-07-21 00:00:00
+143,Ibu memasak sup ayam di dapur.,Mother cooks chicken soup in the kitchen.,2026-07-21 00:00:00
+144,Ayah membaca koran sambil minum teh hangat.,Father reads the newspaper while drinking warm tea.,2026-07-21 00:00:00
+145,Kereta komuter selalu penuh di pagi hari.,The commuter train is always full in the morning.,2026-07-21 00:00:00
+146,Kami merayakan hari kemerdekaan setiap agustus.,We celebrate independence day every August.,2026-07-21 00:00:00
+147,Pasar tradisional menjual sayuran segar.,The traditional market sells fresh vegetables.,2026-07-21 00:00:00
+148,Toko buku itu buka dari jam delapan pagi.,The bookstore is open from eight in the morning.,2026-07-21 00:00:00
+149,Saya membeli sepatu baru untuk sekolah.,I bought new shoes for school.,2026-07-21 00:00:00
+150,Kucing hitam itu memanjat pohon mangga.,The black cat climbed the mango tree.,2026-07-21 00:00:00
+151,Adik sedang menggambar pemandangan gunung.,Little sibling is drawing a mountain scenery.,2026-07-21 00:00:00
+152,Mereka bermain sepak bola di bawah hujan.,They play soccer under the rain.,2026-07-21 00:00:00
+153,Pertunjukan musik itu sangat meriah.,The music performance was very lively.,2026-07-21 00:00:00
+154,Kami menanam bunga mawar di kebun depan.,We plant roses in the front garden.,2026-07-21 00:00:00
+155,Udara pegunungan sangat sejuk dan segar.,The mountain air is very cool and fresh.,2026-07-21 00:00:00
+156,Jalan raya sangat macet saat jam pulang kerja.,The highway is very congested during rush hour.,2026-07-21 00:00:00
+157,Lampu lalu lintas di perempatan mati.,The traffic light at the intersection is broken.,2026-07-21 00:00:00
+158,Kami mengunjungi nenek di desa akhir pekan lalu.,We visited grandmother in the village last weekend.,2026-07-21 00:00:00
+159,Museum itu menyimpan koleksi benda bersejarah.,The museum stores a collection of historical objects.,2026-07-21 00:00:00
+160,Lukisan dinding itu dibuat oleh seniman lokal.,The wall painting was made by a local artist.,2026-07-21 00:00:00
+161,Gelas kaca itu pecah karena jatuh dari meja.,The glass cup broke because it fell from the table.,2026-07-21 00:00:00
+162,Kami menyalakan lampu karena hari sudah gelap.,We turned on the light because it was already dark.,2026-07-21 00:00:00
+163,Pencuri itu ditangkap oleh polisi kemarin malam.,The thief was caught by the police last night.,2026-07-21 00:00:00
+164,Buku catatan saya tertinggal di kelas.,My notebook was left in the classroom.,2026-07-21 00:00:00
+165,Kami selalu berdiskusi untuk menyelesaikan masalah.,We always discuss to solve problems.,2026-07-21 00:00:00
+166,Air sungai itu sangat jernih dan dingin.,The river water is very clear and cold.,2026-07-21 00:00:00
+167,Burung-burung berkicau merdu di pagi hari.,Birds chirp melodiously in the morning.,2026-07-21 00:00:00
+168,Kami membutuhkan lemari baru untuk baju.,We need a new wardrobe for clothes.,2026-07-21 00:00:00
+169,Kunci rumah saya hilang entah di mana.,My house key is lost somewhere.,2026-07-21 00:00:00
+170,Jendela kamar harus dibuka agar udara segar masuk.,The room window must be opened so fresh air enters.,2026-07-21 00:00:00
+171,Pekerjaan rumah matematika sangat sulit.,The mathematics homework is very difficult.,2026-07-21 00:00:00
+172,Kakak perempuan saya bekerja di bank swasta.,My older sister works in a private bank.,2026-07-21 00:00:00
+173,Paman saya mengajar sejarah di universitas.,My uncle teaches history at the university.,2026-07-21 00:00:00
+174,Sepeda motor baru itu berwarna merah terang.,The new motorcycle is bright red.,2026-07-21 00:00:00
+175,Kami berenang di kolam renang umum.,We swam in the public swimming pool.,2026-07-21 00:00:00
+176,Tolong matikan televisi jika tidak ditonton.,Please turn off the television if not watched.,2026-07-21 00:00:00
+177,Mereka sedang membangun jembatan baru.,They are building a new bridge.,2026-07-21 00:00:00
+178,Banjir melanda beberapa wilayah kota.,Floods hit several areas of the city.,2026-07-21 00:00:00
+179,Petani menanam padi di sawah.,Farmers plant rice in the paddy fields.,2026-07-21 00:00:00
+180,Nelayan pergi melaut pada malam hari.,Fishermen go to sea at night.,2026-07-21 00:00:00
+181,Saya ingin menabung uang di bank.,I want to save money in the bank.,2026-07-21 00:00:00
+182,Kursi kayu itu sangat kokoh.,The wooden chair is very sturdy.,2026-07-21 00:00:00
+183,Kami membuat kue bolu cokelat bersama ibu.,We made chocolate sponge cake with mother.,2026-07-21 00:00:00
+184,Adik menangis karena mainannya rusak.,Little sibling cried because their toy was broken.,2026-07-21 00:00:00
+185,Pencarian informasi sekarang sangat mudah dengan internet.,Searching for information is now very easy with the internet.,2026-07-21 00:00:00
+186,Kami menonton film dokumenter tentang sejarah dinosaurus.,We watched a documentary film about dinosaur history.,2026-07-21 00:00:00
+187,Kakek suka membaca buku sastra kuno.,Grandfather likes to read ancient literature books.,2026-07-21 00:00:00
+188,Pintu gerbang sekolah ditutup jam tujuh pagi.,The school gate is closed at seven in the morning.,2026-07-21 00:00:00
+189,Kami membersihkan rumah bersama setiap hari minggu.,We clean the house together every Sunday.,2026-07-21 00:00:00
+190,Kakak laki-laki saya gemar bermain gitar.,My older brother likes playing guitar.,2026-07-21 00:00:00
+191,Saya membeli buah apel merah di supermarket.,I bought red apples at the supermarket.,2026-07-21 00:00:00
+192,Suara musik dari tetangga sangat bising.,The music sound from the neighbor is very noisy.,2026-07-21 00:00:00
+193,Kami menggunakan kompor gas untuk memasak.,We use a gas stove to cook.,2026-07-21 00:00:00
+194,Sepatu olahraga ini sangat ringan dipakai.,These sports shoes are very light to wear.,2026-07-21 00:00:00
+195,Pemerintah membangun jalan tol baru.,The government builds a new toll road.,2026-07-21 00:00:00
+196,Hujan deras disertai angin kencang merusak atap.,Heavy rain with strong wind damaged the roof.,2026-07-21 00:00:00
+197,Kami merayakan kelulusan kakak minggu depan.,We celebrate older sibling's graduation next week.,2026-07-21 00:00:00
+198,Anak kucing itu manja sekali.,The kitten is very affectionate.,2026-07-21 00:00:00
+199,Saya minum teh chamomile sebelum tidur malam.,I drink chamomile tea before sleeping at night.,2026-07-21 00:00:00
+200,Kami menaruh tempat sampah di depan rumah.,We put a trash bin in front of the house.,2026-07-21 00:00:00
+201,Udara malam ini terasa sangat dingin sekali.,The air tonight feels very cold indeed.,2026-07-21 00:00:00
+202,Bunga anggrek itu mekar dengan indah sekali.,The orchid flower blooms very beautifully indeed.,2026-07-21 00:00:00

@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+    background-color: #F7FBF8;
+    color: #2F4238;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #DCE9E1;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar.scrolled {
+    background-color: #2F4238;
+    box-shadow: 0 4px 12px rgba(47, 66, 56, 0.15);
+}
+
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-text {
+    color: #FFFFFF !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+    color: #87C9A5 !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #5BAE7A !important;
+}
+
+.nav-link {
+    color: #2F4238 !important;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #5BAE7A !important;
+}
+
+.btn-primary {
+    background-color: #5BAE7A;
+    border-color: #5BAE7A;
+    color: #FFFFFF;
+    border-radius: 12px;
+    font-weight: 500;
+    padding: 8px 20px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: #4B9B69;
+    border-color: #4B9B69;
+}
+
+.btn-secondary {
+    background-color: #D9F2E3;
+    border-color: #D9F2E3;
+    color: #2F4238;
+    border-radius: 12px;
+    font-weight: 500;
+    padding: 8px 20px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+    background-color: #87C9A5;
+    border-color: #87C9A5;
+    color: #2F4238;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #DCE9E1;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(91, 174, 122, 0.05);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.badge-ready {
+    background-color: #D9F2E3;
+    color: #3D9C67;
+    border: 1px solid #87C9A5;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.hero-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-weight: 700;
+    color: #2F4238;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    color: #5BAE7A;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #DCE9E1;
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+.stat-val {
+    font-size: 28px;
+    font-weight: 700;
+    color: #5BAE7A;
+}
+
+.stat-lbl {
+    font-size: 14px;
+    color: #2F4238;
+}
+
+.feature-icon {
+    font-size: 32px;
+    color: #5BAE7A;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #FFFFFF;
+    border-top: 1px solid #DCE9E1;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    z-index: 1000;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #5BAE7A;
+    color: #FFFFFF;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#scrollToTop:hover {
+    background-color: #4B9B69;
+}
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #D9F2E3;
+    border-bottom-color: #5BAE7A;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.form-control, .form-select {
+    border-radius: 12px;
+    border: 1px solid #DCE9E1;
+    color: #2F4238;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #87C9A5;
+    box-shadow: 0 0 0 0.25rem rgba(91, 174, 122, 0.15);
+    color: #2F4238;
+}
+
+.accordion-item {
+    border-radius: 16px !important;
+    border: 1px solid #DCE9E1 !important;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background-color: #FFFFFF;
+    color: #2F4238;
+    font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #D9F2E3;
+    color: #2F4238;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: #DCE9E1;
+}
+
+.table-custom {
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #DCE9E1;
+}
+
+.table-custom th {
+    background-color: #D9F2E3;
+    color: #2F4238;
+    font-weight: 600;
+}
+
+.pagination .page-link {
+    color: #2F4238;
+    border-color: #DCE9E1;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #5BAE7A;
+    border-color: #5BAE7A;
+    color: #FFFFFF;
+}
+
+.progress-bar-custom {
+    height: 6px;
+    background-color: #D9F2E3;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #5BAE7A;
+    width: 0;
+    transition: width 0.4s ease-out;
+}

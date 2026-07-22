@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Beranda - SmartTranslate NLP{% endblock %}
+
+{% block content %}
+<div class="row align-items-center mb-5">
+    <div class="col-lg-6 text-start">
+        <h1 class="hero-title display-4">SmartTranslate NLP</h1>
+        <h3 class="hero-subtitle mb-4">Sistem Penerjemahan Bahasa Indonesia ke Bahasa Inggris Menggunakan Transformer</h3>
+        <p class="text-muted lead mb-4">Aplikasi web modern berbasis deep learning untuk menerjemahkan kalimat Bahasa Indonesia ke Bahasa Inggris menggunakan arsitektur seq2seq MarianMT secara cepat dan akurat, dilengkapi dengan evaluasi metrik standar NLP.</p>
+        <div class="d-flex gap-3">
+            <a href="{{ url_for('translate') }}" class="btn btn-primary btn-lg">Mulai Terjemahkan</a>
+            <a href="{{ url_for('documentation') }}" class="btn btn-secondary btn-lg">Dokumentasi</a>
+        </div>
+    </div>
+    <div class="col-lg-6 text-center mt-4 mt-lg-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="auto">
+            <rect width="600" height="400" fill="#F7FBF8" rx="16"/>
+            <circle cx="300" cy="200" r="140" fill="#D9F2E3"/>
+            <circle cx="300" cy="200" r="100" fill="#FFFFFF" stroke="#87C9A5" stroke-width="4"/>
+            <path d="M 230 180 Q 300 130 370 180" fill="none" stroke="#5BAE7A" stroke-width="6" stroke-linecap="round"/>
+            <path d="M 230 220 Q 300 270 370 220" fill="none" stroke="#5BAE7A" stroke-width="6" stroke-linecap="round"/>
+            <polygon points="375,170 385,185 365,185" fill="#5BAE7A"/>
+            <polygon points="225,230 215,215 235,215" fill="#5BAE7A"/>
+            <text x="300" y="195" font-family="'Poppins', sans-serif" font-weight="700" font-size="28" fill="#2F4238" text-anchor="middle">ID</text>
+            <text x="300" y="235" font-family="'Poppins', sans-serif" font-weight="700" font-size="28" fill="#5BAE7A" text-anchor="middle">EN</text>
+            <rect x="120" y="140" width="70" height="40" rx="8" fill="#5BAE7A"/>
+            <text x="155" y="165" font-family="sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold">AI</text>
+            <rect x="410" y="220" width="70" height="40" rx="8" fill="#3D9C67"/>
+            <text x="445" y="245" font-family="sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="bold">NLP</text>
+        </svg>
+    </div>
+</div>
+
+<div class="row g-4 mb-5">
+    <div class="col-md-3 col-sm-6">
+        <div class="card stat-card">
+            <div class="stat-val">{{ dataset_count }}</div>
+            <div class="stat-lbl mt-2">Jumlah Dataset</div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card stat-card">
+            <div class="stat-val">{{ history_count }}</div>
+            <div class="stat-lbl mt-2">Jumlah Kalimat</div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card stat-card">
+            <div class="stat-val">MarianMT</div>
+            <div class="stat-lbl mt-2">Model NLP</div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card stat-card">
+            <div class="stat-val text-success">Aktif</div>
+            <div class="stat-lbl mt-2">Status</div>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-center mb-4">Fitur Utama Aplikasi</h2>
+<div class="row g-4">
+    <div class="col-md-3 text-center">
+        <div class="card h-100">
+            <div class="feature-icon">
+                <i class="bi bi-braces"></i>
+            </div>
+            <h5 class="fw-bold">Preprocessing Teks</h5>
+            <p class="text-muted small">Normalisasi huruf kecil, pembersihan karakter non-alphanumeric, penghapusan spasi berlebih, dan tokenisasi kata otomatis.</p>
+        </div>
+    </div>
+    <div class="col-md-3 text-center">
+        <div class="card h-100">
+            <div class="feature-icon">
+                <i class="bi bi-cpu"></i>
+            </div>
+            <h5 class="fw-bold">Model MarianMT</h5>
+            <p class="text-muted small">Penerjemahan modern berbasis Transformer Helsinki-NLP/opus-mt-id-en untuk kualitas terjemahan alami.</p>
+        </div>
+    </div>
+    <div class="col-md-3 text-center">
+        <div class="card h-100">
+            <div class="feature-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h5 class="fw-bold">Evaluasi Otomatis</h5>
+            <p class="text-muted small">Penilaian objektif menggunakan metrik standar industri seperti BLEU, ROUGE-1/2/L, dan METEOR.</p>
+        </div>
+    </div>
+    <div class="col-md-3 text-center">
+        <div class="card h-100">
+            <div class="feature-icon">
+                <i class="bi bi-database-check"></i>
+            </div>
+            <h5 class="fw-bold">Manajemen Dataset</h5>
+            <p class="text-muted small">Penyimpanan terintegrasi dengan SQLite untuk data paralel, fitur pencarian, impor, dan ekspor riwayat.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
